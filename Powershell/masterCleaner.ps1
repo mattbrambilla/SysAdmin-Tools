@@ -12,6 +12,16 @@ $balloon.BalloonTipTitle = "Hello Commander"
 $balloon.Visible = $true 
 $balloon.ShowBalloonTip(10000)
 
+Write-Host "Hello Commander! Hope you're fine, do you need Xbox Suite into your machine?" | Do-Something
+
+$input = read-host "Enter Yes or No"
+if ($input -eq 'yes' -or $input -eq 'no'){
+Write-Output "Proceed!"
+}else{
+Write-Output "I don't understand :( / Please only type 'yes' or 'no'."
+}
+
+
 # Remove Xbox Services
 
 Get-AppxPackage Microsoft.XboxApp | Remove-AppxPackage
