@@ -7,7 +7,7 @@ $global:balloon = New-Object System.Windows.Forms.NotifyIcon
 $path = (Get-Process -id $pid).Path
 $balloon.Icon = [System.Drawing.Icon]::ExtractAssociatedIcon($path) 
 $balloon.BalloonTipIcon = [System.Windows.Forms.ToolTipIcon]::Warning 
-$balloon.BalloonTipText = 'Take a seat while I''m working to optimize the system'
+$balloon.BalloonTipText = 'Take a seat while I''m working to optimize the system (removing shit Apps and lot of other things...).'
 $balloon.BalloonTipTitle = "Hello Commander" 
 $balloon.Visible = $true 
 $balloon.ShowBalloonTip(10000)
