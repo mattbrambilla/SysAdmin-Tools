@@ -21,7 +21,6 @@ Write-Output "Proceed!"
 Write-Output "I don't understand :( / Please only type 'yes' or 'no'."
 }
 
-
 # Remove Xbox Services
 
 Get-AppxPackage Microsoft.XboxApp | Remove-AppxPackage
@@ -57,3 +56,5 @@ Get-AppxPackage Clipchamp.Clipchamp | Remove-AppPackage
 #Remove Skype
 
 Get-AppxPackage Microsoft.SkypeApp | Remove-AppPackage
+
+–WhatIf
