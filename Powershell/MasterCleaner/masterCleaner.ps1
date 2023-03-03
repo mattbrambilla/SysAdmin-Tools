@@ -1,4 +1,5 @@
-﻿#Write-Host –NoNewLine "Hello Comander! Take a seat while I'm working to optimize the system" BackgroundColor White
+﻿                                                                                                                                                                                                                                                                                    
+#Write-Host –NoNewLine "Hello Comander! Take a seat while I'm working to optimize the system" BackgroundColor White
 
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
