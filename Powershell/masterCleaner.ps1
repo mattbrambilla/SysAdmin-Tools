@@ -10,7 +10,7 @@ $balloon.BalloonTipIcon = [System.Windows.Forms.ToolTipIcon]::Warning
 $balloon.BalloonTipText = 'Take a seat while I''m working to optimize the system (removing shit Apps and lot of other things...).'
 $balloon.BalloonTipTitle = "Hello Commander" 
 $balloon.Visible = $true 
-$balloon.ShowBalloonTip(10000)
+$balloon.ShowBalloonTip(10000) 
 
 Write-Host "Hello Commander! Hope you're fine, do you need Xbox Suite into your machine?" | Do-Something
 
