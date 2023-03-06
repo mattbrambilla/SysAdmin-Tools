@@ -52,6 +52,8 @@
             ⡀⠷⣤⣤⠟⡀⢻⣤⡀⠷⣤⣤⠃⠈⣧⣠⠞⣤⡀⣿⡀⡀⣿⡀⠹⣤⣤⠞⡀⣿⡀⡀
             ⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀
 
+⚠️ THIS IS A WORK IN PROGRESS - DON'T USE IT NOW ⚠️
+
  = The powerfull Powershell script to clean all Windows 10/11 bloatware =
 
 Hello Commander,
