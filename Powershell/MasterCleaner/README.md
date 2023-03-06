@@ -54,7 +54,7 @@
 
 ⚠️ THIS IS A WORK IN PROGRESS - DON'T USE IT NOW ⚠️
 
- = The powerfull Powershell script to clean all Windows 10/11 bloatware =
+ 🧑‍💻 The powerfull Powershell script to clean all Windows 10/11 bloatware 🗑️
 
 Hello Commander,
 I developed this script in PowerShell to facilitate the cleaning of all those pre-installed applications in Windows 10/11, the script was written for PS so you can easily run on your client with right click => execute as administrator.
