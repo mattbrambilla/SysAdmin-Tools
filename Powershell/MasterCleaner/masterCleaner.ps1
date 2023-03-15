@@ -1,6 +1,5 @@
-﻿                                                                                                                                                                                                                                                                                    
-#Write-Host –NoNewLine "Hello Comander! Take a seat while I'm working to optimize the system" BackgroundColor White
-
+﻿#Initialize contents
+              
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 Add-Type -AssemblyName System.Windows.Forms 
@@ -8,18 +7,21 @@ $global:balloon = New-Object System.Windows.Forms.NotifyIcon
 $path = (Get-Process -id $pid).Path
 $balloon.Icon = [System.Drawing.Icon]::ExtractAssociatedIcon($path) 
 $balloon.BalloonTipIcon = [System.Windows.Forms.ToolTipIcon]::Warning 
-$balloon.BalloonTipText = 'Take a seat while I''m working to optimize the system (removing shit Apps and lot of other things...).'
+$balloon.BalloonTipText = 'Take a seat while I''m working to optimize the system.'
 $balloon.BalloonTipTitle = "Hello Commander" 
 $balloon.Visible = $true 
 $balloon.ShowBalloonTip(10000) 
 
-Write-Host "Hello Commander! Hope you're fine, do you need Xbox Suite into your machine?" | Do-Something
+Write-Host "Hello Commander! Hope you're fine. Do you need Xbox Suite?"
 
 $input = read-host "Enter Yes or No"
-if ($input -eq 'yes' -or $input -eq 'no'){
+if ($input -eq 'yes'){
 Write-Output "Proceed!"
-}else{
-Write-Output "I don't understand :( / Please only type 'yes' or 'no'."
+}
+else if ($input -eq 'no') {
+Write-Output "Ok I'll keep it!"
+} else{
+Write-Output "I don't understand / Please only type 'yes' or 'no'."
 }
 
 # Remove Xbox Services
