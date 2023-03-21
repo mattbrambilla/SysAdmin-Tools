@@ -18,11 +18,12 @@ $input = read-host "Enter Yes or No"
 if ($input -eq 'yes'){
 Write-Output "Proceed!"
 }
-else if ($input -eq 'no') {
+[else if ($input -eq 'no') {
 Write-Output "Ok I'll keep it!"
-} else{
+}]
+[else {
 Write-Output "I don't understand / Please only type 'yes' or 'no'."
-}
+}]
 
 # Remove Xbox Services
 
