@@ -1,18 +1,25 @@
-﻿#Initialize contents
-              
+﻿#Set policy to make this script executable on the system (if you have policy block rule)
+           
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+#Preparing content
+
+$username = [System.Environment]::UserName
+
+#Initialize the baloon notification
 
 Add-Type -AssemblyName System.Windows.Forms 
 $global:balloon = New-Object System.Windows.Forms.NotifyIcon
 $path = (Get-Process -id $pid).Path
 $balloon.Icon = [System.Drawing.Icon]::ExtractAssociatedIcon($path) 
 $balloon.BalloonTipIcon = [System.Windows.Forms.ToolTipIcon]::Warning 
-$balloon.BalloonTipText = 'Take a seat while I''m working to optimize the system.'
-$balloon.BalloonTipTitle = "Hello Commander" 
+$balloon.BalloonTipText = 'I''m working to optimize the system.'
+$balloon.BalloonTipTitle = "Hello $username" 
 $balloon.Visible = $true 
 $balloon.ShowBalloonTip(10000) 
 
-Write-Host "Hello Commander! Hope you're fine. Do you need Xbox Suite?"
+#I need to fix this and show the message to user
+Write-Host "Hello $username! Hope you're fine. This script is designed to remove automatically all the Windows bloatware app pre-installed. Do you need Xbox Suite?"
 
 $input = read-host "Enter Yes or No"
 if ($input -eq 'yes'){
@@ -20,10 +27,10 @@ Write-Output "Proceed!"
 }
 [else if ($input -eq 'no') {
 Write-Output "Ok I'll keep it!"
-}]
+}
 [else {
 Write-Output "I don't understand / Please only type 'yes' or 'no'."
-}]
+}
 
 # Remove Xbox Services
 
