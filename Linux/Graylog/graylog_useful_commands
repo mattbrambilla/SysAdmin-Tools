@@ -1,0 +1,9 @@
+=> EXPAND DISK
+sudo tune2fs -m 0 /dev/sda8
+
+=> CLEAN ALL LOGS
+1. cd /home/elasticsearch/logs
+2. rm -r *
+
+=> VERIFY DISK SPACE
+df -h
