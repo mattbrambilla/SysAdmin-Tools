@@ -1,0 +1,41 @@
+To reduce the size of a SharePoint site using PowerShell, follow these steps:
+
+1. **Connect to SharePoint Online:**
+   - Open **Windows PowerShell ISE** on your system.
+   - Run the following command to connect to SharePoint Online (replace the placeholders with your actual SharePoint tenant name and user credentials):
+     ```powershell
+     Connect-SPOService -Url "https://your-tenant.sharepoint.com" -Credential "your-username@your-tenant.onmicrosoft.com"
+     ```
+   - Enter your user password when prompted.
+
+2. **Get SharePoint Site Storage Size:**
+   - To retrieve the size of a SharePoint site collection, run the following cmdlet:
+     ```powershell
+     Get-SPOSite
+     ```
+   - This will display the storage quota, current storage usage, and other details for the specified site.
+
+3. **Get Storage Capacity of a Single SharePoint Site:**
+   - If you want to get the storage capacity of a specific SharePoint site, use the following code (replace the placeholders with your actual AdminSiteURL and SiteURL):
+     ```powershell
+     # Config Parameters
+     $AdminSiteURL = "https://your-tenant-admin.sharepoint.com"
+     $SiteURL = "https://your-tenant.sharepoint.com/sites/YourSite"
+
+     # Get Credentials to connect to SharePoint Admin Center
+     $Cred = Get-Credential
+
+     # Connect to SharePoint Online Admin Center
+     Connect-SPOService -Url $AdminSiteURL -Credential $Cred
+
+     # Get the Site collection
+     $Site = Get-SPOSite $SiteURL
+
+     # Display storage information
+     Write-Host "Allocated: " $Site.StorageQuota
+     Write-Host "Used: " $Site.StorageUsageCurrent
+     Write-Host "Warning Level: " $Site.StorageQuotaWarningLevel
+     ```
+   - This script will provide the allocated storage quota, current storage usage, and storage quota warning level for the specified site.
+
+Remember that the maximum storage size limit for a SharePoint site by default is **25TB**. You can also set custom storage limits if needed¹². Happy PowerShell scripting! 🚀
